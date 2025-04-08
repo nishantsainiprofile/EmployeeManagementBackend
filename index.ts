@@ -124,7 +124,7 @@ app.use(cookieParser());
 // const PORT = process.env.PORT || 5001;
 app.use(cors({
     // origin: 'http://localhost:5174', // Replace with your frontend URL
-    origin: 'https://employee-management-frontend-yrk5.vercel.app/', // Replace with your frontend URL
+    origin: 'https://employee-management-frontend-rosy.vercel.app/', // Replace with your frontend URL
     credentials: true,  
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
