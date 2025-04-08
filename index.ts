@@ -100,7 +100,7 @@
 
 import express, { Request, Response } from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import Employee from "./models/Employee"; // ✅ Correct path
 import bodyParser from "body-parser";
 import cors from "cors"
@@ -113,7 +113,7 @@ const router = express.Router();
 
 
 
-dotenv.config();
+// dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -121,9 +121,10 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 
-const PORT = process.env.PORT || 5001;
+// const PORT = process.env.PORT || 5001;
 app.use(cors({
-    origin: 'http://localhost:5174', // Replace with your frontend URL
+    // origin: 'http://localhost:5174', // Replace with your frontend URL
+    origin: 'https://employee-management-frontend-yrk5.vercel.app/', // Replace with your frontend URL
     credentials: true,  
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -276,6 +277,7 @@ app.post('/api/EmployeeLogin', async (req: Request, res: Response) => {
 //   });
   
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
+export default app;
